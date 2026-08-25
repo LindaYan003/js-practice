@@ -1,0 +1,120 @@
+﻿:root {
+    --blue: #2563eb;
+    --blue-dark: #1d4ed8;
+    --gray-50: #f8fafc;
+    --gray-200: #e2e8f0;
+    --gray-400: #94a3b8;
+    --gray-700: #334155;
+    --green: #16a34a;
+    --red: #dc2626;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gray-50);
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--gray-700);
+}
+
+.card {
+    width: 360px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 22px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+    input:invalid.touched {
+        border-color: var(--red);
+    }
+
+.error {
+    min-height: 16px;
+    margin: 0 0 12px;
+    font-size: 12px;
+    color: var(--red);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    background: var(--blue);
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+    button[type="submit"]:hover {
+        background: var(--blue-dark);
+    }
+
+    button[type="submit"]:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+
+.spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.form-message {
+    margin: 12px 0 0;
+    font-size: 13px;
+    text-align: center;
+    min-height: 18px;
+}
+
+    .form-message.success {
+        color: var(--green);
+    }
+
+    .form-message.error {
+        color: var(--red);
+    }

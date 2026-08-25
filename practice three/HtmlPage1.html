@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Native Login Form — Vanilla JS Mini-Project</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="card">
+        <h1>Sign in</h1>
+
+        <form id="login-form" novalidate>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="username" />
+            <p class="error" id="email-error"></p>
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" minlength="8" required autocomplete="current-password" />
+            <p class="error" id="password-error"></p>
+
+            <button id="submit-btn" type="submit">
+                <span class="btn-label">Sign in</span>
+                <span class="spinner" hidden></span>
+            </button>
+
+            <p class="form-message" id="form-message"></p>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
