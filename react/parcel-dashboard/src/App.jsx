@@ -1,11 +1,11 @@
 import "./App.css";
-import TodoList from "./TodoList";
+import TodoApp from "./TodoApp";
 import LoginForm from "./LoginForm";
 
 function App() {
   return (
     <div className="app">
-      <TodoList />
+      <TodoApp />
       <LoginForm />
     </div>
   );
